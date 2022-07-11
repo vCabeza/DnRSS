@@ -1,7 +1,10 @@
 html {
+  background-color: #e0d3af;
   text-align: center;
-  background-color: #282c34;
-  color: white;
+}
+
+.bg-darker-old {
+  background-color: #b4ab8f;
 }
 
 .App h1 {

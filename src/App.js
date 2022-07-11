@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Parser from "rss-parser";
 import "./App.css";
+import RSSList from "./Components/RSSList";
 
 function App() {
   const [feed, setFeed] = useState([]);
@@ -23,21 +24,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>D&RSS</h1>
-      {feed &&
-        feed.items &&
-        feed.items.map((feedNew, key) => (
-          <div
-            key={key}
-            className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4"
-          >
-            <h1>
-              {feedNew.title} - {feedNew.pubDate}
-            </h1>
-            <p>{feedNew.contentSnippet}</p>
-            <p>{feedNew.link}</p>
+      <h1 className="font-semibold tracking-tight text-4xl p-4">D&RSS</h1>
+
+      {feed && (
+        <div className="px-2">
+          <div className="flex flex-wrap justify-center">
+            <RSSList feed={feed.items} />
           </div>
-        ))}
+        </div>
+      )}
     </div>
   );
 }
