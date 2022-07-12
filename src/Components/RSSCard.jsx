@@ -2,7 +2,10 @@ import React from "react";
 
 const RSSCard = (props) => {
   return (
-    <div className="w-3/5">
+    <div
+      className="w-3/5 cursor-pointer"
+      onClick={() => props.openDetail(props.feedNew)}
+    >
       <div className="block rounded-lg shadow-lg bg-darker-old text-center">
         <div className="p-6">
           <h5 className="text-gray-900 text-xl font-medium mb-2">

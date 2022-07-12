@@ -13,9 +13,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const rss = await parser.parseURL(
-        CORS_PROXY + "https://www.dndbeyond.com/posts.rss"
+        CORS_PROXY + "https://www.themonstersknow.com/feed/"
       );
-      console.log("rss", rss);
       setFeed(rss);
     };
 
