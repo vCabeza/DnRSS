@@ -7,20 +7,17 @@ const RSSCard = (props) => {
       onClick={() => props.openDetail(props.feedNew)}
     >
       <div className="block rounded-lg shadow-lg bg-darker-old text-center">
-        <div className="p-6">
+        <div className="p-4">
           <h5 className="text-gray-900 text-xl font-medium mb-2">
             {props.feedNew.title}
           </h5>
         </div>
-        <div className="px-6 pt-4 pb-2">
-          <p>{props.feedNew.contentSnippet}</p>
+        <div className="px-6 pb-2 max-h-12 overflow-hidden">
+          {props.feedNew.contentSnippet}
         </div>
-        <a
-          href={props.feedNew.link}
-          className="text-blue-600 hover:text-blue-700 transition duration-300 ease-in-out"
-        >
+        <p className="text-blue-600 htransition duration-300 ease-in-out">
           {props.feedNew.link}
-        </a>
+        </p>
       </div>
     </div>
   );

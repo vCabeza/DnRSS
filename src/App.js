@@ -7,7 +7,9 @@ import RSSList from "./Components/RSSList";
 function App() {
   return (
     <BrowserRouter>
-      <h1 className="font-semibold tracking-tight text-4xl p-4">D&RSS</h1>
+      <h1 className="font-semibold tracking-tight text-4xl p-4 text-red-600">
+        D&RSS
+      </h1>
       <Routes>
         <Route index path="/" element={<RSSList />} />
         <Route path="/details" element={<RSSDetail />} />
