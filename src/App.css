@@ -4,5 +4,9 @@ html {
 }
 
 .bg-darker-old {
-  background-color: #b4ab8f;
+  background-color: #a79e85;
+}
+
+.bg-darker-old:hover {
+  background-color: #9b947c;
 }
